@@ -1,0 +1,15 @@
+- hosts: targets
+  tasks:
+  - name: "targets test"
+    shell: |
+        touch targets
+- hosts: centos
+  tasks:
+  - name: "centos test"
+    shell: |
+        touch centos
+- hosts: ubuntu
+  tasks:
+  - name: "ubuntu test"
+    shell: |
+        touch ubuntu

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  ansible:
+    container_name: ansible 
+    build: docker/ansible
+    tty: true
+    working_dir: "/var/data"
+    volumes:
+      - .:/var/data
+  
+  target-centos:
+    container_name: target-centos
+    build: docker/target-centos
+    tty: true
+  target-ubuntu:
+    container_name: target-ubuntu
+    build: docker/target-ubuntu
+    tty: true
+  target-no-python-ubuntu:
+    container_name: target-no-python-ubuntu
+    build: docker/target-no-python-ubuntu
+    tty: true
